@@ -1,23 +1,20 @@
+import json
+import requests
 import streamlit as st
-from PIL import Image
-
-# Load the image
-image = Image.open('personn.jpg')
+from streamlit_lottie import st_lottie
 
 # Center the title using Markdown
 st.markdown("<h1 style='text-align: center;'>بين الحلم و الاستثمار </h1>", unsafe_allow_html=True)
 
-# Center the image using Streamlit's layout
-col1, col2, col3 = st.columns([4, 5, 4])  # Create three columns
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
-with col1:
-    st.write("")  # Empty space in the first column
-
-with col2:
-    st.image(image, width=100)  # Center the image in the second column
-
-with col3:
-    st.write("")  # Empty space in the third column
+lottie_family = load_lottieurl("https://lottie.host/c0cbe4ae-6193-4417-b105-5c6519235745/hW7UA2JbjT.json")
 
 
-
+st_lottie(
+lottie_family,
+)
