@@ -1,6 +1,7 @@
 import streamlit as st
-
-st.image('https://github.com/ManalHanif/Usecase6/personn.jpg')
+from PIL import Image
+image = Image.open('https://github.com/ManalHanif/Usecase6/personn.jpg')
+st.image(image)
 st.write('hello world')
 
 
