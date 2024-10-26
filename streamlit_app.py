@@ -9,7 +9,7 @@ image = Image.open('avg_lands.png')
 image2 = Image.open('with_aparts.png')
 # Load the image
 image3 = Image.open('imgg.png')
-image4 = Image.open('riyadh_map.jpg')
+image4 = Image.open('riyadhh.png')
 
 
 # Center the title using Markdown
@@ -17,7 +17,7 @@ st.markdown("<h1 style='text-align: center;'>بين الحلم و اللإستث
 # Center the image using Streamlit's layout
 
 # Center the image using Streamlit's layout
-col1, col2, col3 = st.columns([1,7, 1])  # Create three columns
+col1, col2, col3 = st.columns([1,4, 1])  # Create three columns
 
 with col1:
     st.write("")  # Empty space in the first column
@@ -33,7 +33,7 @@ st.markdown("<h5 style='text-align: center;'> أبو خالد رجلاً طمو�
 
 
 # Center the image using Streamlit's layout
-col1, col2, col3 = st.columns([1,12, 1])  # Create three columns
+col1, col2, col3 = st.columns([1,13, 1])  # Create three columns
 
 with col1:
     st.write("")  # Empty space in the first column
@@ -46,7 +46,7 @@ with col3:
 
 st.markdown("<h5 style='text-align: center;'>بعد وصوله إلى الرياض، بدأ أبو خالد يفكر في حلمه القديم: بناء فيلته الخاصة. كان يحلم بمساحة خضراء واسعة تحيط بها، وغرف لكل أطفاله الثلاثة، في مكان استراتيجي يسهل عليه الوصول إلى عمله وكل احتياجاته. لكن حين بدأ البحث عن الأراضي في وسط الرياض، صُدم بالأسعار! كانت تكاليف الأراضي مرتفعة جداً، ولم تكن مجرد شراء الأرض هو ما يقلقه؛ بل تكاليف البناء الإضافية التي ستتبعها. هذا الأمر دفعه لإعادة التفكير في خطته.</h5>", unsafe_allow_html=True)
 # Center the image using Streamlit's layout
-col1, col2, col3 = st.columns([1,12, 1])  # Create three columns
+col1, col2, col3 = st.columns([1,13, 1])  # Create three columns
 
 with col1:
     st.write("")  # Empty space in the first column
@@ -58,7 +58,7 @@ with col3:
     st.write("")  # Empty space in the third column
     
 st.markdown("<h5 style='text-align: center;'> بعد تفكير طويل، قرر أن يستبعد فكرة شراء الأرض والبناء بنفسه. وبدلاً من ذلك، بدأ يفكر في شراء فيلا جاهزة. بحث كثيراً، قرر ان تكون الفلة في شرق الرياض، لقربها من عمله و مناسبه لميزانيته</h5>", unsafe_allow_html=True)
-col1, col2, col3 = st.columns([1,12, 1])  # Create three columns
+col1, col2, col3 = st.columns([1,13, 1])  # Create three columns
 
 with col1:
     st.write("")  # Empty space in the first column
