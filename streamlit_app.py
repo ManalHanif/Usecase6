@@ -15,16 +15,9 @@ image4 = Image.open('riyadhh.png')
 # Center the title using Markdown
 st.markdown("<h1 style='text-align: center;'>بين الحلم و اللإستثمار </h1>", unsafe_allow_html=True)
 # Center the image using Streamlit's layout
-col1, col2, col3 = st.columns([1,4, 1])  # Create three columns
 
-with col1:
-    st.write("")  # Empty space in the first column
+st.image(image4, width=450)  # Center the image in the second column
 
-with col2:
-    st.image(image4, width=450)  # Center the image in the second column
-
-with col3:
-    st.write("")  # Empty space in the third column
 
 st.markdown("<h5 style='text-align: center;'> أبو خالد رجلاً طموحاً، يعيش حياة مليئة بالتحديات والتطلعات الكبيرة. لديه ثلاثة أطفال ، وكان دائماً يطمح لتوفير أفضل حياة لهم. في أحد الأيام، جاءه قرار مفاجئ؛ الانتقال إلى مدينة الرياض، المدينة الكبيرة التي تحفل بالفرص. لم يكن الانتقال سهلاً، لكنه كان يرى في الرياض بوابة لمستقبل مشرق له ولعائلته .</h5>", unsafe_allow_html=True)
 
