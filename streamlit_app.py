@@ -9,7 +9,7 @@ image = Image.open('avg_lands.png')
 image2 = Image.open('with_aparts.png')
 # Load the image
 image3 = Image.open('imgg.png')
-image4 = Image.open('riyadh_map.png')
+image4 = Image.open('riyadh_map.jpg')
 
 
 # Center the title using Markdown
