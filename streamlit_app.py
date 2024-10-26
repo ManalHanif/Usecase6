@@ -35,7 +35,7 @@ with col1:
     st.write("")  # Empty space in the first column
 
 with col2:
-    st.image(image2, width=650)  # Center the image in the second column
+    st.image(image3, width=650)  # Center the image in the second column
 
 with col3:
     st.write("")  # Empty space in the third column
