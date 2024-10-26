@@ -8,7 +8,7 @@ image = Image.open('personn.jpg')
 st.markdown("<h1 style='text-align: center;'>بين الحلم و الاستثمار </h1>", unsafe_allow_html=True)
 
 # Center the image using Streamlit's layout
-col1, col2, col3 = st.columns([2, 3, 2])  # Create three columns
+col1, col2, col3 = st.columns([3, 4, 3])  # Create three columns
 
 with col1:
     st.write("")  # Empty space in the first column
