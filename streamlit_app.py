@@ -23,7 +23,7 @@ with col1:
     st.write("")  # Empty space in the first column
 
 with col2:
-    st.image(image4, width=250)  # Center the image in the second column
+    st.image(image4, width=300)  # Center the image in the second column
 
 with col3:
     st.write("")  # Empty space in the third column
