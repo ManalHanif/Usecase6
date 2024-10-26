@@ -16,7 +16,7 @@ st.markdown("<h5 style='text-align: center;'>بعد وصوله إلى الريا
 
 
 # Center the image
-st.image(image, width=5000)
+st.image(image, width=500)
 
 
 # Center the image using Streamlit's layout
