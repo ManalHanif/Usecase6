@@ -1,5 +1,5 @@
 import streamlit as st
-pandas as pd
+import pandas as pd
 
 
 # Center the title using Markdown
