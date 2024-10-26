@@ -3,7 +3,7 @@ from PIL import Image
 
 
 # Load the image
-image = Image.open('lands.png')
+image = Image.open('avg_lands.png')
 
 
 
