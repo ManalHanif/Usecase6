@@ -16,5 +16,18 @@ st.markdown("<h5 style='text-align: center;'>بعد وصوله إلى الريا
 
 
 # Center the image
-st.image(image, width=250)
+st.image(image, width=5000)
+
+
+# Center the image using Streamlit's layout
+col1, col2, col3 = st.columns([1, 2, 1])  # Create three columns
+
+with col1:
+    st.write("")  # Empty space in the first column
+
+with col2:
+    st.image(image, width=200)  # Center the image in the second column
+
+with col3:
+    st.write("")  # Empty space in the third column
 
