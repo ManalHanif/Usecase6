@@ -7,17 +7,17 @@ image = Image.open('personn.jpg')
 # Center the title using Markdown
 st.markdown("<h1 style='text-align: center;'>بين الحلم و الاستثمار </h1>", unsafe_allow_html=True)
 
-# Center the image
-st.image(image, width=200)
+# Center the image using Streamlit's layout
+col1, col2, col3 = st.columns([1, 2, 1])  # Create three columns
+
+with col1:
+    st.write("")  # Empty space in the first column
+
+with col2:
+    st.image(image, width=200)  # Center the image in the second column
+
+with col3:
+    st.write("")  # Empty space in the third column
 
 
-# Center the image using HTML
-st.markdown("<div style='text-align: center;'><img src='data:image/jpeg;base64,{}' width='200'/></div>".format(image_to_base64(image)), unsafe_allow_html=True)
-
-def image_to_base64(image):
-    import io
-    import base64
-    buffered = io.BytesIO()
-    image.save(buffered, format="JPEG")
-    return base64.b64encode(buffered.getvalue()).decode()
 
