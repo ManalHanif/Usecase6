@@ -15,13 +15,13 @@ image4 = Image.open('riyadhh.png')
 # Center the title using Markdown
 st.markdown("<h1 style='text-align: center;'>بين الحلم و اللإستثمار </h1>", unsafe_allow_html=True)
 # Center the image using Streamlit's layout
-col1, col2, col3 = st.columns([1,12, 1])  # Create three columns
+col1, col2, col3 = st.columns([1,3, 1])  # Create three columns
 
 with col1:
     st.write("")  # Empty space in the first column
 
 with col2:
-    st.image(image4, width=200)  # Center the image in the second column
+    st.image(image4, width=300)  # Center the image in the second column
 
 with col3:
     st.write("")  # Empty space in the third column
