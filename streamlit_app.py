@@ -15,7 +15,7 @@ vill_with_apart = vill_with_apart[vill_with_apart['price'] <= 6000000]
 # load dataframe(real estate)
 apdf = pd.read_csv("data/apartments in Riyadh Saudi Arabia/realEstate_cleaned.csv")
 apdf.drop(columns="Unnamed: 0",inplace=True)
-st.write(apdf)
+
 
 # Load the image
 image = Image.open('avg_lands.png')
@@ -96,8 +96,14 @@ col1, col2, col3 = st.columns([1,13, 1])  # Create three columns
 with col1:
     st.write("")  # Empty space in the first column
 
+# create hist chart for Distribution of Property Prices
+fig2 = px.histogram(apdf, x='price', nbins=30, title='Distribution of Property Prices',
+                   marginal='rug', opacity=0.75)
+fig2.update_traces(marker=dict(line=dict(width=1, color='black')))
+
 with col2:
-    st.image(image3, width=650)  # Center the image in the second column
+    st.plotly_chart(fig2)
+    #st.image(image3, width=650)  # Center the image in the second column
 
 with col3:
     st.write("")  # Empty space in the third column
