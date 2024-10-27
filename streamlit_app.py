@@ -96,10 +96,17 @@ col1, col2, col3 = st.columns([1,13, 1])  # Create three columns
 with col1:
     st.write("")  # Empty space in the first column
 
-# create hist chart for Distribution of Property Prices
-fig2 = px.histogram(apdf, x='price', nbins=30, title='Distribution of Property Prices',
-                   marginal='rug', opacity=0.75)
-fig2.update_traces(marker=dict(line=dict(width=1, color='black')))
+# create bar chart for Distribution of Property Prices
+fig2 = px.bar(district_price, 
+             x='district', 
+             y='price', 
+             title='Average Property Price by District',
+             labels={'price': 'Average Price', 'district': 'District'},
+             color='price', 
+             color_continuous_scale='Viridis')
+
+# Show the plot
+fig2.update_layout(xaxis_title='District', yaxis_title='Average Price', xaxis_tickangle=-45)
 
 with col2:
     st.plotly_chart(fig2)
