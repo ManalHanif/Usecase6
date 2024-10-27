@@ -28,11 +28,11 @@ image4 = Image.open('riyadhh.png')
 # Load animation image(1)
 
 # --  asset url: https://lottie.host/04339cb6-0438-4aa6-a4e7-c37a49e040dc/VCfxjdvdmg.json
-def load_lot(url1):
-    r1= requests.get(url1)
+def load_lot(url):
+    r= requests.get(url)
     if r.status_code !=200:
         return None
-    return r1.json()
+    return r.json()
  
 lot_cod1 = load_lot("https://lottie.host/04339cb6-0438-4aa6-a4e7-c37a49e040dc/VCfxjdvdmg.json")   
 
