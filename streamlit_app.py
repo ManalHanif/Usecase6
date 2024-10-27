@@ -14,7 +14,7 @@ vill_with_apart = vill_with_apart[vill_with_apart['price'] <= 6000000]
 
 # load dataframe(real estate)
 apdf = pd.read_csv("data/apartments in Riyadh Saudi Arabia/realEstate_cleaned.csv")
-apdf.drop(columns=['UserName','imgs','profileImg','content','path','location','width','length','title'],inplace=True)
+apdf.drop(columns="Unnamed: 0",inplace=True)
 st.write(apdf)
 
 # Load the image
