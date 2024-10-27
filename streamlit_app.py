@@ -25,6 +25,20 @@ image2 = Image.open('with_aparts.png')
 image3 = Image.open('imgg.png')
 image4 = Image.open('riyadhh.png')
 
+# Load animation image
+
+# --  asset url: https://lottie.host/96099f2a-5cda-4f0d-82df-e8ad2fb2fcda/aKOav2Rv6Y.json
+def load_lot(url):
+    r= requests.get(url)
+    if r.status_code !=200:
+        return None
+    return r.json()
+ 
+lot_cod = load_lot("https://lottie.host/96099f2a-5cda-4f0d-82df-e8ad2fb2fcda/aKOav2Rv6Y.json")    
+
+
+
+
 
 # Center the title using Markdown
 st.markdown("<h1 style='text-align: center;'>بين الحلم و اللإستثمار </h1>", unsafe_allow_html=True)
@@ -119,6 +133,8 @@ with col2:
 with col3:
     st.write("")  # Empty space in the third column
 st.markdown("<h5 style='text-align: center;'>في خضم البحث، لفت انتباهه شيء آخر. وجد أن بعض الفلل المعروضة للبيع تحتوي على شقق للإيجار، وأن أسعار الإيجارات في شرق الرياض كانت مشجعة جداً. فقد بلغ متوسط الإيجار لتلك الشقق حوالي 52,000 ريال سنوياً. هذه الفكرة كانت مغرية لأبو خالد؛ فمن خلال شراء فيلا جاهزة تحتوي على شقة للإيجار، يمكنه أن يؤمن مصدر دخل إضافي يغطي جزءاً من تكاليف الشراء. </h5>", unsafe_allow_html=True)
+st_lottie(lot_cod,height=300,key='coding')
+
 st.markdown("<h5 style='text-align: center;'>وبالفعل، بعد دراسة متأنية وتفكير عميق، قرر أبو خالد أن يسكن في إحدى تلك الفلل. ليس فقط لأنه وجد ما يناسب عائلته، بل لأنه أيضاً وجد فرصة استثمارية ممتازة. استقر في الفلة الجديدة، واستأجر الشقة، وبدأ يشعر بأن حلمه يتحقق بطريقة لم يكن يتوقعها. وهكذا، تمكن أبو خالد من تأمين سكن لعائلته والاستثمار في نفس الوقت، مما جعله يشعر بالرضا والطمأنينة تجاه مستقبله ومستقبل أطفاله.بين الحلم والاستثمار </h5>", unsafe_allow_html=True)
 
 
