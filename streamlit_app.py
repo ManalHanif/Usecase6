@@ -1,6 +1,16 @@
 import streamlit as st
 from PIL import Image
+import pandas as pd 
+import plotly.express as px
+import plotly.graph_objects as pg
+import requests
+from streamlit_lottie import st_lottie
 
+# load dataframe
+villa = pd.read_csv("Cleaning.csv")
+villa.drop(columns='Unnamed: 0', inplace=True)
+vill_with_apart = villa[villa['apartments'] <= 5]
+vill_with_apart = vill_with_apart[vill_with_apart['price'] <= 6000000]
 
 
 # Load the image
@@ -50,9 +60,28 @@ col1, col2, col3 = st.columns([1,13, 1])  # Create three columns
 
 with col1:
     st.write("")  # Empty space in the first column
+# creat bar chart
+top_5_locations = vill_with_apart.groupby('location')['price'].mean().nlargest(5).reset_index()
+
+# Plotting with Plotly
+fig1 = px.bar(top_5_locations, 
+             x='location', 
+             y='price', 
+             color='price', 
+             color_continuous_scale='Reds',
+             title='متوسط سعر الفلل في الرياض(فلل مع شقق)',
+             labels={'price': 'Average Price', 'location': 'Location'},
+             text='price')
+
+# Show the plot
+fig1.update_traces(texttemplate='%{text:.2f}', textposition='outside')
+fig1.update_layout(xaxis=dict(title='Location'), 
+                  yaxis=dict(title='Average Price with apart'),
+                  showlegend=False)
 
 with col2:
-    st.image(image2, width=650)  # Center the image in the second column
+    st.plotly_chart(fig1)
+    #st.image(image2, width=650)  # Center the image in the second column
 
 with col3:
     st.write("")  # Empty space in the third column
