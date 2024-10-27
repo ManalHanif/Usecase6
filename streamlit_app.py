@@ -97,6 +97,8 @@ with col1:
     st.write("")  # Empty space in the first column
 
 # create bar chart for Distribution of Property Prices
+district_price = district_price.sort_values(by='price', ascending=False)
+
 fig2 = px.bar(district_price, 
              x='district', 
              y='price', 
