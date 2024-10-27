@@ -96,9 +96,11 @@ col1, col2, col3 = st.columns([1,13, 1])  # Create three columns
 with col1:
     st.write("")  # Empty space in the first column
 
-# create bar chart for Distribution of Property Prices
-district_price = district_price.sort_values(by='price', ascending=False)
 
+# Group by district and calculate the average price
+district_price = apdf.groupby('district')['price'].mean().reset_index()
+district_price = district_price.sort_values(by='price', ascending=False)
+# create bar chart for Distribution of Property Prices
 fig2 = px.bar(district_price, 
              x='district', 
              y='price', 
