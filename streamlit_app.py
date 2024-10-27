@@ -58,7 +58,8 @@ with col1:
     st.write("")  # Empty space in the first column
 
 with col2:
-    st.st_lottie(lot_cod1,height=300,key='coding')
+    st_lottie(lot_cod1,height=300,key='coding')
+    
     #st.image(image4, width=400)  # Center the image in the second column
 
 with col3:
