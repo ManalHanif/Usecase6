@@ -40,11 +40,12 @@ lot_cod1 = load_lot("https://lottie.host/04339cb6-0438-4aa6-a4e7-c37a49e040dc/VC
 
 # --  asset url: https://lottie.host/96099f2a-5cda-4f0d-82df-e8ad2fb2fcda/aKOav2Rv6Y.json
 
- def load_lot2(url):
+def load_lot2(url):
     r= requests.get(url)
     if r.status_code !=200:
         return None
     return r.json()
+     
 lot_cod2 = load_lot2("https://lottie.host/96099f2a-5cda-4f0d-82df-e8ad2fb2fcda/aKOav2Rv6Y.json")    
 
 
